@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --title-color: hsl(223, 47%, 23%);
+    --button-color: hsl(245, 75%, 52%);
+    --text-color: hsl(224, 23%, 55%);
+    --background-color: hsl(225, 100%, 94%);
+    --card-color: hsl(225, 100%, 98%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: var(--background-color);
+    background-image: url("order-summary-component-main/images/pattern-background-desktop.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    font-size: 1em;
+    font-family: 'Red Hat Display';
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.hero {
+    display: flex;
+}
+
+.hero img {
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+
+
+
+
+.card {
+    background-color: var(--card-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    width: 28.125em;
+    padding: 3em;
+    text-align: center;
+    line-height: 1.5em;
+    border-radius: 0 0 1.5em 1.5em;
+
+    color: var(--text-color);
+}  
+
+
+h1 {
+    font-weight: 900;
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: var(--title-color);
+}
+
+p.desc {
+    letter-spacing: 0.5px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    margin-top: 2em;    
+    background-color: hsla(224, 23%, 55%, 0.05);
+    border-radius: 7px;
+}
+
+div.price {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+
+    margin-left: 1em;
+
+}
+
+h2 {
+    color: var(--title-color);
+    font-weight: 900;
+}
+
+a.change {
+    font-weight: 700;
+    color: var(--button-color);
+}
+
+a.change:hover {
+    opacity: .7;
+    text-decoration-line: none; 
+}
+
+.pay-button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+a.payment {
+    background-color: var(--button-color);
+    color: var(--card-color);
+    text-decoration-line: none;
+    padding: 0.7em 1em;
+    border-radius: 10px;
+    margin: 1em 0;
+    font-weight: 900;
+
+    box-shadow: 0 1.3em 5px var(--background-color);
+}
+
+a.payment:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+a.cancel {
+    text-decoration-line: none;
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: 900;
+
+}
+
+a.cancel:hover {
+    color: #000;
+}
+
+@media only screen and (max-width: 500px){
+    body {
+        display: block;
+    }
+    main {
+        margin: 5%;
+        min-height: 95vh;
+        justify-content: center;
+    }
+    .hero {
+        flex-direction: column;
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        padding: 2em;
+    }
+}
